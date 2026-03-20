@@ -1,7 +1,7 @@
-<<<<<<< HEAD
+
 # agente-iabot-wpp
 Arquitectura básica de un agente IA de ChatGPT integrado con Whatsapp Bussiness para la marca SANTIISIMA
-=======
+
 # WhatsApp Agent (agente-iabot-wpp)
 
 Agente de WhatsApp con Node.js integrado con IA (ChatGPT) para la marca SANTIISIMA.
@@ -98,4 +98,3 @@ npm run dev   # desarrollo con nodemon
 # o
 npm start     # producción
 ```
->>>>>>> 9343f78bef246ed3a998e2082bb59e41f5f53151
