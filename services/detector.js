@@ -1,21 +1,18 @@
-function normalizeText(text) {
-
+function normalize(text) {
     return text.toLowerCase();
-
 }
 
 function scoreMatch(message, dictionary) {
 
-    let score = {};
+    let scores = {};
 
     for(let key in dictionary) {
-
-        score[key] = dictionary[key].filter(word => message.includes(word)).length;
+        scores[key] = dictionary[key].filter(word => message.includes(word)).length;
     }
 
-    let best = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
-
+    const best = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
     return scores[best] > 0 ? best : null;
+
 } 
 
 module.exports = {normalize, scoreMatch};

@@ -2,16 +2,16 @@ const axios = require("axios");
 
 async function sendMessage(to, message) {
     await axios.post(
-        "",
+        `https://graph.facebook.com/v18.0/${process.env.PHONE_NUMBER_ID}/messages`,
         {
             messaging_product: "whatsapp",
             to: to,
-            text: {body: message}
+            text: { body: message }
         },
         {
             headers: {
-                authorization: `Bearer ${process.env.WHATSAPP_TOKEN}`,
-                "Content_type": "application/json"
+                Authorization: `Bearer ${process.env.WHATSAPP_TOKEN}`,
+                "Content-Type": "application/json"
             }
         }
     );
