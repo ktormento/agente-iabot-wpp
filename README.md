@@ -1,3 +1,4 @@
+
 # agente-iabot-wpp
 
 Agente conversacional para **WhatsApp Business** (Meta Cloud API), orientado a la marca **SANTIISIMA**: clasificación de intención y perfil, respuestas con tono configurable, recomendaciones, memoria de usuario en MongoDB y flujo de **agenda / reservas**.
