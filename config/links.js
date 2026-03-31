@@ -1,4 +1,4 @@
-module.exports = {
+module.exports= {
     servicios: {
         reservas: "",
         menu: "https://www.santiisimacoffee.com/online-ordering",

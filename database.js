@@ -1,21 +1,13 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
-export async function connectDB() {
-  try {
-
-    if (!process.env.MONGO_URI) {
-      throw new Error("Falta la variable de entorno MONGO_URI");
+async function connectDB() {
     
+    try{
+        await mongoose.connect(process.env.MONGO_URI);
+        console.log("MongoDB conectado");
+    } catch(error){
+        console.error("Error MongoDB:", error);
     }
-
-    await mongoose.connect(process.env.MONGO_URI);
-    console.log("MongoDB conectado");
-  
-} catch (error) {
-
-    console.error("Error MongoDB:", error);
-    throw error;
-
 }
 
-}
+module.exports = connectDB;
